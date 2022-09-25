@@ -1,0 +1,34 @@
+<div class="dp-date-wrapper">
+  <div class="dp-date-input-container">
+    <div class="dp-form-item">
+      <dp-date-picker #fromDateComponent
+                      id="fromDate"
+                      [(ngModel)]="model.fromDate"
+                      [mode]="mode"
+                      [config]="config"
+                      [displayDate]="displayDate"
+                      [placeholder]="placeholder"
+                      required="true"
+                      [theme]="'dp-material dp-main'"
+                      (onChange)="onSelectFrom()"
+                      (open)="openCalendar()"
+      >
+      </dp-date-picker>
+      <span> ~ </span>
+      <dp-date-picker #toDateComponent
+                      id="toDate"
+                      [(ngModel)]="model.toDate"
+                      [mode]="mode"
+                      [config]="config"
+                      [displayDate]="displayDate"
+                      [placeholder]="placeholder"
+                      required="true"
+                      [theme]="'dp-material dp-main'"
+                      (onChange)="onSelectTo()"
+                      (open)="openCalendar()"
+      >
+      </dp-date-picker>
+    </div>
+  </div>
+</div>
+
